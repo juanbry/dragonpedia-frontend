@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import CharacterDetail from './pages/CharacterDetail'; // ¡Asegúrate de importar este componente!
+import CharacterDetail from './pages/CharacterDetail';
 
 function App() {
   return (

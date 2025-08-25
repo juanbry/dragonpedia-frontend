@@ -1,5 +1,3 @@
-// src/components/CommentSection.tsx
-
 import React, { useState, useRef } from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import { es } from 'date-fns/locale';

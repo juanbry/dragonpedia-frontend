@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Character } from '../features/characters/charactersApi'; // 1. Importa el tipo Character
+import { Character } from '../features/characters/charactersApi'; 
 
 interface CharacterCardProps {
   character: Character;

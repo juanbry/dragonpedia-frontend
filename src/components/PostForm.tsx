@@ -1,9 +1,7 @@
-// src/components/PostForm.tsx
-
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { postSchema, PostFormData } from '../schemas/postSchema'; // Importa el esquema y el tipo
+import { postSchema, PostFormData } from '../schemas/postSchema'; 
 
 const PostForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<PostFormData>({

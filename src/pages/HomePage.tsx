@@ -13,7 +13,7 @@ const HomePage = () => {
         </span>
       </h1>
       <div className="w-full max-w-5xl mx-auto px-4">
-        {/* El SearchBar ya no está aquí */}
+        {}
         <CharacterList />
       </div>
       <PostForm />
