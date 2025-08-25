@@ -11,7 +11,7 @@ export interface Comment {
 
 export const commentsApi = createApi({
   reducerPath: 'commentsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://dragonpedia-backend.onrender.com/' }),
   tagTypes: ['Comments'],
   endpoints: (builder) => ({
     getCommentsByPostId: builder.query<Comment[], number>({
