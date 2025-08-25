@@ -1,6 +1,7 @@
 import React from 'react';
 import CharacterList from '../components/CharacterList'; 
 import PostForm from '../components/PostForm';
+import Footer from '../components/Footer';
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
         <CharacterList />
       </div>
       <PostForm />
+      <Footer />
     </div>
   );
 };
