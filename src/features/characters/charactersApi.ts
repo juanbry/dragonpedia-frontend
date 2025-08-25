@@ -1,3 +1,5 @@
+// src/features/characters/charactersApi.ts
+
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export interface Character {
@@ -30,8 +32,11 @@ export const charactersApi = createApi({
   reducerPath: 'charactersApi',
   baseQuery: fetchBaseQuery({ baseUrl: 'https://dragonball-api.com/api/' }),
   endpoints: (builder) => ({
-    getCharacters: builder.query<CharactersResponse, { page: number; limit: number }>({
-      query: ({ page = 1, limit = 10 }) => `characters?page=${page}&limit=${limit}`,
+    getPaginatedCharacters: builder.query<CharactersResponse, { page: number; limit: number }>({
+      query: ({ page = 1, limit = 12 }) => `characters?page=${page}&limit=${limit}`,
+    }),
+    getCharacterSearch: builder.query<Character[], string>({
+      query: (name) => `characters?name=${name}`,
     }),
     getCharacterById: builder.query<Character, string>({
       query: (id) => `characters/${id}`,
@@ -39,4 +44,4 @@ export const charactersApi = createApi({
   }),
 });
 
-export const { useGetCharactersQuery, useGetCharacterByIdQuery } = charactersApi;
+export const { useGetPaginatedCharactersQuery, useGetCharacterSearchQuery, useGetCharacterByIdQuery } = charactersApi;
